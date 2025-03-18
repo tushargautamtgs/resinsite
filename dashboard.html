@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+<div class="dashboard-container">
+    <h2>Upload Resin Product</h2>
+    <input type="text" id="productId" placeholder="Product ID" />
+    <input type="text" id="productName" placeholder="Product Name" />
+    <input type="number" id="price" placeholder="Price" />
+    <input type="number" id="discountPrice" placeholder="Discount Price (optional)" />
+    <input type="number" id="stock" placeholder="Stock Quantity" />
+    <input type="file" id="productImage" />
+    <button onclick="uploadProduct()">Upload Product</button>
+    <p id="uploadMessage"></p>
+
+    <button onclick="viewAllProducts()" class="view-btn">👀 View All Products</button>
+    <div class="product-list" id="productList"></div>
+</div>
+
+<!-- Modal for Viewing All Products -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h3>🛒 All Products</h3>
+        <div class="product-items" id="modalProductItems"></div>
+    </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>

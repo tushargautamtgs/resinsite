@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+<div class="login-container">
+    <h2>Admin Login</h2>
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+    <p id="loginMessage"></p>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+<script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAxblilB8EEB3Z3X6Vt2pRUTIYunrPjiIU",
+      authDomain: "resinecomsite-b81db.firebaseapp.com",
+      databaseURL: "https://resinecomsite-b81db-default-rtdb.firebaseio.com",
+      projectId: "resinecomsite-b81db",
+      storageBucket: "resinecomsite-b81db.appspot.com",
+      messagingSenderId: "218978469921",
+      appId: "1:218978469921:web:c6c7f790b1d869442a7b60"
+    };
+    firebase.initializeApp(firebaseConfig);
+</script>
+<script src="admin.js"></script>
+</body>
+</html>
